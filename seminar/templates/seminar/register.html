@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repulic day Seminar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>Self Defense Seminar by Crosstrain Fight Club.</h1>
+<h3> On this Republic Day, let's resolve to keep ourselves as well as our loved ones safe.</h3>
+<br><br>
+<h4>Please fill the form below to register for the seminar.</h4>
+<form action="seminar/register/" method="post">{% csrf_token %}
+    <input type="text" name="name" placeholder="Name" required/><br>
+    <input type="number" name="age" placeholder="Age" required/><br>
+    <input type="number" name="contact" placeholder="Contact No." required/><br>
+    <input type="email" name="email" placeholder="Email ID" required/><br><br>
+    <p style="font-size:18px">Select the center you'll be visiting for the seminar:</p>
+    <label class="radio-inline">
+        <input type="radio" name="loc" value="1" required>Safdarjung Enclave, South Delhi
+    </label>
+    <label class="radio-inline">
+        <input type="radio" name="loc" value="2" required>Vikaspuri, West Delhi
+    </label>
+    <label class="radio-inline">
+        <input type="radio" name="loc" value="3" required>Gurgaon
+    </label>
+    <label class="radio-inline">
+        <input type="radio" name="loc" value="4" required>Noida
+    </label>
+    <label class="radio-inline">
+        <input type="radio" name="loc" value="5" required>Chandigarh
+    </label><br><br>
+    <input type="submit" name="submit">
+</form>
+
+ 
+</body>
+</html>
